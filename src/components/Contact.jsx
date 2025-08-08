@@ -18,7 +18,10 @@ const Contact = () => {
 
     try {
       // await axios.post("http://localhost:5000/contact", formData);
-      await axios.post("https://dbackend-one.vercel.app/api/contact", formData);
+     await axios.post(
+      "https://dbackend-one.vercel.app/api/contact", // 👈 your backend endpoint
+      formData
+    );
 
       alert("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });

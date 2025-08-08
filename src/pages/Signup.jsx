@@ -89,7 +89,9 @@ export default function Signup() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/signup', form);
+      // await axios.post('http://localhost:5000/api/auth/signup', form);
+      await axios.post('https://dbackend-one.vercel.app/api/auth/signup', form);
+
       navigate('/login'); // Redirect to login
     } catch (err) {
       setError(err.response?.data?.message || 'Signup failed');
