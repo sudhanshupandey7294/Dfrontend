@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Contact from "../components/Contact";
 import Alumini from "../pages/Alumini"
 import WhatsAppChat from "../components/WhatsappChat"; 
+import Chatbot from "../components/Chatbot";
 
 
 
@@ -235,7 +236,8 @@ const Home = () => {
       </section>
       <Contact />
       <WhatsAppChat />
-
+  {/* Sticky Chatbot */}
+      <Chatbot />
 
       </div>
   );
