@@ -4,7 +4,7 @@ import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaRobot, FaTimes, FaPaperPlane } from 'react-icons/fa';
 
-const API_BASE = process.env.REACT_APP_API_URL || 'https://dbackend-one.vercel.app'; // change if needed
+// const API_BASE = process.env.REACT_APP_API_URL || 'https://dbackend-one.vercel.app'; // change if needed
 
 function getSessionId() {
   let sid = localStorage.getItem('dservices_chat_session');
@@ -44,7 +44,7 @@ export default function Chatbot() {
     setLoading(true);
 
     try {
-      const res = await axios.post(`${API_BASE}/api/chat`, {
+      const res = await axios.post( 'https://dbackend-one.vercel.app/api/chat', {
         message: userMsg.content,
         sessionId: sessionIdRef.current
       });
